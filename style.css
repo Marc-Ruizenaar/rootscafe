@@ -1,8 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
-body {
+* {
   margin: 0;
   padding: 0;
+}
+
+body {
+  box-sizing: border-box;
   font-family: "Inter", sans-serif;
 }
 
@@ -11,10 +15,16 @@ a {
   text-decoration: none;
 }
 
+h2 {
+  font-size: 30px;
+}
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
 }
+
+
 
 .main-header {
   background-color: white;
@@ -22,32 +32,32 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
 
-main
+  nav {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
 
-.main-header nav {
-  flex-grow: 1;
-  display: flex;
-  justify-content: center;
-}
+    ul {
+      list-style-type: none;
+      display: flex;
+      justify-content: center;
+      padding: 0;
+      margin: 0;
+      font-weight: bold;
 
-.main-header nav ul {
-  list-style-type: none;
-  display: flex;
-  justify-content: center;
-  padding: 0;
-  margin: 0;
-  font-weight: bold;
-}
+      li {
+        margin: 0 20px;
 
-.main-header nav ul li {
-  margin: 0 20px;
-}
+        a {
+          text-decoration: none;
+          color: black;
+        }
+      }
 
-.main-header nav ul li a {
-  text-decoration: none;
-  color: black;
+    }
+  }
+
 }
 
 .email-btn {
@@ -77,103 +87,172 @@ main
   align-items: center;
 }
 
+.jumbo-section {
+  position: relative;
+  width: 100%;
 
-.page-container {
-  width: 100vw;
-  min-height: 100vh;
-
-  .jumbo-section {
+  .image-container {
     position: relative;
     width: 100%;
+    overflow: hidden;
 
-    .image-container {
-      position: relative;
+    img {
       width: 100%;
-
-      img {
-        width: 100%;
-        display: block;
-        object-fit: cover;
-      }
-
-      .text-overlay {
-        color: white;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-items: center;
-        gap: 20px;
-        background-image: linear-gradient(
-          to right,
-          rgba(0, 0, 0, 0.5),
-          rgba(0, 0, 0, 0)
-        );
-        padding: 100px 150px;
-      }
-
-      .button-wrapper {
-        display: flex;
-        gap: 20px;
-
-        button {
-          background-color: black;
-          color: white;
-          border: none;
-          padding: 5px 20px;
-          border-radius: 5px;
-        }
-      }
+      display: block;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -10;
+     
     }
-  }
 
-  .cafe-section {
-    width: 100%;
-    height: auto;
-    padding: 50px 150px;
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -5;
+      background: linear-gradient(to right,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0));
+    }
 
-    .cafe-title {
+    .text-overlay {
+      color: white;
+      width: 100%;
+      height: 100%;
       display: flex;
       flex-direction: column;
-      align-items: center;
+      justify-items: center;
+      gap: 20px;
+      padding:60px 0;
     }
 
-    .cafe-info {
+    .button-wrapper {
       display: flex;
       gap: 20px;
 
-      .cafe-meal {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-        justify-content: center;
-
-        .meal-title p {
-          color: green;
-          font-style: italic;
-        }
-      }
-
-      img {
-        border-radius: 10px;
+      a {
+        background-color: black;
+        color: white;
+        border: none;
+        padding: 5px 20px;
+        border-radius: 5px;
+        cursor: pointer;
       }
     }
   }
+}
 
-  .hours-section {
+
+.cafe-section {
+  width: 100%;
+  height: auto;
+  padding: 50px 150px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+  .cafe-title {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+  }
+
+  .cafe-info {
+    display: flex;
     gap: 20px;
-    background-color: black;
-    color: white;
-    padding: 30px 150px;
+
+    .cafe-meal {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      justify-content: center;
+
+      .meal-title p {
+        color: green;
+        font-style: italic;
+      }
+    }
+
+    img {
+      border-radius: 10px;
+      width: 50%;
+    }
   }
 }
+
+.hours-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  background-color: black;
+  color: white;
+  padding: 30px 150px;
+}
+
+
+/* Goksin */
+.business-info {
+  font-size: 18px;
+  padding: 4rem 8rem;
+}
+
+#opening-hours-section {
+  background-image: url("./images/background.png");
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  padding: 20px;
+}
+
+#workspaces-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 40px;
+  gap: 60px;
+}
+
+.workspaces-text {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 50%;
+}
+
+#workspaces-section img {
+  height: 450px;
+  object-fit: cover;
+  width: 50%;
+  border-radius: 15px;
+}
+
+#about-us-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+.about-us-text {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 50%;
+}
+
+#about-us-section img {
+  height: 450px;
+  width: 50%;
+  border-radius: 15px;
+}
+
+
