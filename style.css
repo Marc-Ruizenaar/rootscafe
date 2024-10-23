@@ -69,14 +69,11 @@ h2 {
 
   .jumbo-section {
     .text-overlay {
-p {
-  padding-left: 20px;
-}
+
     }
   }
 
   .cafe-section {
-    padding: 60px 0px;
 
     .cafe-title {
       gap: 20px;
