@@ -27,6 +27,8 @@ h2 {
   }
 }
 
+/* large screen stuff */
+
 @media (min-width: 768px) {
   details {
     display: none;
@@ -53,36 +55,59 @@ h2 {
         font-weight: bold;
 
         li {
-          margin: 0 20px;
+          margin: 0 50px;
+          font-size: 1.8rem;
 
           a {
             text-decoration: none;
             color: black;
           }
         }
-
       }
     }
+  }
 
+  .jumbo-section {
+    .text-overlay {
+      margin: 40px;
+p {
+  padding-left: 20px;
+}
+    }
+  }
+
+  .cafe-section {
+    margin: 40px;
+    padding: 60px 0px;
+
+    .cafe-title {
+      gap: 20px;
+    }
+  }
+  .business-info{
+    margin: 40px;
   }
 }
 
+
 .logo {
-position: absolute;
-width: auto;
-height: 45px;
-top: 0;}
+  position: absolute;
+
+}
 
 details {
-   /* Remove default arrow */
+
+  /* Remove default arrow */
   summary {
-    list-style: none; 
+    list-style: none;
   }
+
   background-color: rgb(255, 255, 255);
-  position: fixed; 
+  position: fixed;
   top: 0;
-  width: 100%; 
-  z-index: 1000; 
+  width: 100%;
+  z-index: 1000;
+
   /* Hamburger Menu Styles */
   .hamburger-menu {
     display: block;
@@ -136,6 +161,7 @@ details {
         border: 2px solid rgb(5, 3, 3);
         padding: 20px;
         font-size: 2.5rem;
+
         a {
           text-decoration: none;
           color: rgb(0, 0, 0);
@@ -176,6 +202,7 @@ details {
 .jumbo-section {
   position: relative;
   width: 100%;
+
   @media (max-width: 768px) {
     margin-top: 45px;
   }
@@ -243,9 +270,8 @@ details {
 }
 
 .cafe-section {
-  width: 100%;
   height: auto;
-padding: 20px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -293,7 +319,7 @@ padding: 20px;
 /* Goksin */
 .business-info {
   font-size: 18px;
-padding: 20px;
+  padding: 20px;
 }
 
 #opening-hours-section {
