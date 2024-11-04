@@ -7,6 +7,10 @@
   font-family: "Inter", sans-serif;
 }
 
+details summary::-webkit-details-marker {
+  display: none;
+}
+
 a {
   color: white;
   text-decoration: none;
@@ -185,7 +189,7 @@ details {
 
 .content-footer a {
   display: flex;
-  gap: 5px;
+  gap: 10px;
   align-items: center;
 }
 
@@ -202,7 +206,7 @@ details {
     width: 100%;
     overflow: hidden;
 
-    img {
+    video {
       width: 100%;
       height: 100%;
       display: block;
@@ -262,12 +266,12 @@ details {
 }
 
 .cafe-section {
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 40px;
+  padding-bottom: 40px;
   height: auto;
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 40px;
 
   .cafe-title {
     display: flex;
@@ -277,7 +281,7 @@ details {
 
   .cafe-info {
     display: flex;
-    gap: 20px;
+    gap: 60px;
 
     @media (max-width: 768px) {
       flex-direction: column;
@@ -326,6 +330,7 @@ details {
 #opening-hours-section {
   padding-top: 30px;
   padding-bottom: 30px;
+  gap: 20px;
   background-image: url("./images/background.png");
   background-size: cover;
   display: flex;
@@ -335,11 +340,11 @@ details {
 }
 
 #workspaces-section {
-  padding-top: 20px;
+  padding-top: 80px;
+  padding-bottom: 80px;
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-bottom: 40px;
   gap: 60px;
 
   @media (max-width: 768px) {
@@ -369,7 +374,7 @@ details {
   align-items: center;
   justify-content: space-between;
   gap: 60px;
-  padding-bottom: 20px;
+  padding-bottom: 80px;
 
   @media (max-width: 768px) {
     flex-direction: column-reverse;
